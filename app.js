@@ -1,10 +1,10 @@
+const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
-const loginButton = document.querySelector("#login-form Button");
 
-function onLoginBtnClick()
+function onLoginSubmit(event)
 {
-   const username = loginInput.value;
-  console.log(username);
+  event.preventDefault();
+  console.log(loginInput.value);
 }
 
-loginButton.addEventListener("click",onLoginBtnClick)
+loginForm.addEventListener("submit", onLoginSubmit);
